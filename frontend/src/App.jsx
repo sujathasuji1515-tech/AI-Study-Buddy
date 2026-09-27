@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 
-const API = "http://localhost:5000/api";
+const API = "https://ai-study-buddy-api-4g65.onrender.com/api";
 
 /* --------------------------------
    AI RESPONSE EXTRACTOR
@@ -12,12 +12,10 @@ function extractAIContent(data) {
     return "No response received from server.";
   }
 
-  // Plain string
   if (typeof data === "string") {
     return data;
   }
 
-  // Common text fields
   if (typeof data.content === "string") {
     return data.content;
   }
@@ -80,7 +78,6 @@ ${options}
       .join("\n\n---\n\n");
   }
 
-  // Some APIs may return quiz inside "quiz"
   if (Array.isArray(data.quiz)) {
     return data.quiz
       .map((question, index) => {
@@ -468,8 +465,6 @@ export default function App() {
   return (
     <main className="container">
 
-      {/* HEADER */}
-
       <header>
         <h1>AI StudyBuddy</h1>
 
@@ -483,8 +478,6 @@ export default function App() {
         </button>
       </header>
 
-
-      {/* ADD MATERIAL */}
 
       <section className="card">
 
@@ -537,8 +530,6 @@ export default function App() {
       </section>
 
 
-      {/* YOUR MATERIALS */}
-
       <section className="card">
 
         <h2>
@@ -566,8 +557,6 @@ export default function App() {
               </p>
 
 
-              {/* SUMMARY */}
-
               <button
                 onClick={() =>
                   generate(
@@ -579,8 +568,6 @@ export default function App() {
                 Summarize
               </button>
 
-
-              {/* FLASHCARDS */}
 
               <button
                 onClick={() =>
@@ -596,8 +583,6 @@ export default function App() {
                 Flashcards
               </button>
 
-
-              {/* QUIZ */}
 
               <button
                 onClick={() =>
@@ -620,8 +605,6 @@ export default function App() {
 
       </section>
 
-
-      {/* AI OUTPUT */}
 
       <section className="card">
 
