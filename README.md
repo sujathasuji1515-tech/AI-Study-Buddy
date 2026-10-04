@@ -33,8 +33,6 @@ Start development server:
 npm run dev
 ```
 
-Then open the local URL shown by Vite.
-
 ## Starter API routes
 - POST `/api/auth/register`
 - POST `/api/auth/login`
