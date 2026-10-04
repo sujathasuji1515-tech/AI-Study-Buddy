@@ -33,14 +33,6 @@ Start development server:
 npm run dev
 ```
 
-### 2. Frontend
-Open another terminal in `frontend`:
-
-```bash
-npm install
-npm run dev
-```
-
 Then open the local URL shown by Vite.
 
 ## Starter API routes
