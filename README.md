@@ -3,7 +3,6 @@
 AI-powered learning assistant for students.
 
 ## Stack
-- Frontend: React + Vite
 - Backend: Node.js + Express
 - Database: MongoDB Atlas + Mongoose
 - Authentication: JWT + bcryptjs
